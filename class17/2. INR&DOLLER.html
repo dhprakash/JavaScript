@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+
+//  DOM    DOCUMENT OBJECT MODEL
+
+//  id         ->  document.getElementById
+
+//  classname  -> document.getElementsByClassName
+
+//  tagname    ->  document.getElementsByTagName
+
+</script>
+</head>
+<body>
+
+<span id="jagat">Hello Om</span>
+<input type="text" onkeyup="inr()" id="paisa" placeholder="inr">
+<input type="text" onkeyup="dolor()" id="dlr" placeholder="dolor">
+
+<script>
+document.getElementById('jagat').innerHTML="INDIA";
+
+
+function inr(){
+var inr =document.getElementById('paisa');
+var d=inr.value/72;
+
+var m=document.getElementById('dlr');
+m.value=d;
+}
+
+function dolor(){
+var dolor=document.getElementById('dlr').value;
+var ir= dolor*72;
+document.getElementById('paisa').value=ir;
+}
+
+</script>
+</body>
+</html>

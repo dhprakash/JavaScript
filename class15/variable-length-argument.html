@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<script>
+//  VAR-ARGS  variable length arguments
+
+
+function sum()
+{
+var s=0;
+
+for(var i=0;i<arguments.length;i++)
+{
+s=s+arguments[i];
+}
+return s;
+}
+
+var d=sum(10,20,30,40,4,34,23,56,67);
+document.write(d +"<br/>");
+
+
+var f=sum(10,20,30);
+document.write(f +"<br/>");
+
+var g=sum(10,20,45,30);
+document.write(g +"<br/>");
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

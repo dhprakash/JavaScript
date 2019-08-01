@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<h1 id='t'>30</h1>
+<span>Download Now:<span id='link'></span></span>
+
+
+<script>
+var count=30;
+var x=setInterval(naveen,1000);
+
+
+function naveen(){
+count--;
+var h=document.getElementById('t');
+h.innerHTML=count;
+if(count==0){
+ clearInterval(x);
+ var link="click to download";
+ document.getElementById('link').innerHTML=link.link('http://www.youtube.com');
+ h.style.display='none';
+ }
+}
+</script>
+
+
+</body>
+</html>

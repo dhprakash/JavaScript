@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="a1">
+<h1>20</h1>
+<h1>90</h1>
+<h1>30</h1>
+<h1>40</h1>
+<h1>60</h1>
+<h1>80</h1>
+</div>
+
+
+<hr>
+
+
+
+<div id="a2">
+<h1>20</h1>
+<h1>77</h1>
+<h1>30</h1>
+<h1>40</h1>
+<h1>60</h1>
+<h1>80</h1>
+</div>
+
+<p>Result=<span id='result'>0</span></p>
+<button onclick="upperwala()">Upper Wala Sum</button>
+<button onclick="nichewala()">Niche Wala Sum</button>
+
+
+
+<script>
+function upperwala()
+{
+var ele=document.getElementById('a1');
+var all=ele.getElementsByTagName('h1');
+var sum=0;
+for(var i=0;i<all.length;i++)
+{
+sum+=parseInt(all[i].innerHTML);
+}
+document.getElementById('result').innerHTML=sum;
+}
+
+
+
+
+function nichewala()
+{
+var ele=document.getElementById('a2');
+var all=ele.getElementsByTagName('h1');
+var sum=0;
+for(var i=0;i<all.length;i++)
+{
+sum+=parseInt(all[i].innerHTML);
+}
+document.getElementById('result').innerHTML=sum;
+}
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+</body>
+</html>

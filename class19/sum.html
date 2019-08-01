@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+
+function sum()
+{
+var a=document.getElementsByClassName('s');
+var ss=0;
+for(var i=0;i<a.length;i++)
+{
+var d=parseInt(a[i].innerHTML);
+
+ss=ss+d;
+
+}
+document.getElementById('r').innerHTML=ss;
+}
+
+
+</script>
+</head>
+<body>
+
+<button onclick="sum()">CLICK</button>
+
+<h1 class="s">100</h1>
+<h1 class="s">324</h1>
+<h1 class="s">150</h1>
+<h1 class="s">123</h1>
+<h1 class="s">520</h1>
+<h1 class="s">820</h1>
+
+<h1 id="r">Rs.</h1>
+
+</body>
+</html>

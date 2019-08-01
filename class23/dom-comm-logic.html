@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+function dp(){
+var om = document.getElementById('om');
+var listt = document.getElementById('listt');
+
+if(om.value[om.value.length-1]==',')
+{
+var a = om.value.split(","); 
+var ele="";
+for(var i=0;i<a.length;i++)
+{
+ele+="<p>"+a[i]+"</p>";
+}
+listt.innerHTML=ele;
+}
+}
+</script>
+</head>
+<body>
+
+
+<div>
+<input type="text" id="om" onkeyup="dp()">
+</div>
+<div>
+<p id="listt"></p>
+</div>
+</body>
+
+</html>

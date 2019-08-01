@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+<script>
+
+//  OBJECT BASED JAVA SCRIPT
+
+
+var laptop={
+width:15.6,
+hard_disk:"500gb",
+color:"black",
+description:function()
+{
+
+alert("hello");
+return "VERY SMART LAPTOP "+this.width;   //  this refrence for current object
+}
+
+};
+
+var human={
+name:'mukesh',
+email:'mukesh@pp.com'
+};
+
+/* FIRST METHOD*/
+var d=laptop.width;
+console.log(d);
+console.log(laptop.width);
+console.log(laptop.hard_disk);
+console.log(laptop.width+"  "+laptop.hard_disk);
+
+laptop.width=14;  //  change value of properites
+console.log(laptop.width);
+
+delete laptop.width;
+console.log(laptop.width);
+
+laptop.width=15.6;
+console.log(laptop.width);
+
+console.log(typeof laptop);
+
+//console.log(laptop.description());
+
+
+/* SECOND METHOD*/
+var m=laptop['width'];
+console.log(m);
+
+
+
+
+/* const fun=()=>{
+var obj={name:'jagat',email:'jagat@gmail.com',age:33,address:'saket'};
+
+for(asd in obj)
+{
+console.log(asd+" "+obj[asd]);
+
+}
+
+
+
+document.getElementById('data').innerHTML=obj.name;
+
+}
+*/
+
+
+const fun=()=>{
+var objarray=[
+
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh1',age:26,address:'c-26 uttam nagar',email:'AA@gu.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'},
+{name:'mukesh',age:24,address:'c-25 uttam nagar',email:'AA@gurgaon.com'}
+];
+for(data in objarray ){
+//console.log(objarray[data]);
+document.getElementById('data').innerHTML=objarray[data];
+}
+}
+
+</script>
+</head>
+<body>
+<table id="data">
+<tr ></tr>
+
+
+</table>
+<span id='data' onclick="fun()"></span>
+<button onclick="laptop.description()">karo</button>
+<button onclick="fun()">karo</button>
+
+
+</body>
+</html>

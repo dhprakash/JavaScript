@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.qu{color:#fff;padding:10px;background-color:red;width:20%;text-align:center;margin:10px;}
+</style>
+</head>
+
+<body>
+
+
+<p class="qu">1</p>
+<p class="qu">2</p>
+<p class="qu">3</p>
+<p class="qu">4</p>
+<p class="qu">5</p>
+<p class="qu">6</p>
+<p class="qu">7</p>
+<p class="qu">8</p>
+<p class="qu">9</p>
+<p class="qu">10</p>
+<p class="qu">Quantity: 26</p>
+
+<button onclick="calculate()">Calculate</button>
+
+
+
+
+<script>
+
+function calculate(){
+var arr=document.getElementsByClassName('qu');
+var len=arr.length;
+var count=0;
+for(let i=0;i<len-1;i++){
+count+=eval(arr[i].innerHTML);
+}
+arr[len-1].innerHTML="Quantity: "+count;
+}
+
+</script>
+</body>
+</html>

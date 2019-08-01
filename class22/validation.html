@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<script>
+function validate()
+{
+var email=document.getElementById('email');
+var num=document.getElementById('num');
+if(isNaN(num.value))
+{
+num.value="";
+}
+
+if(!validateEmail(email.value))
+{
+email.style.border='1px solid red';
+return false;
+}
+else{
+email.style.border='1px solid gray';
+}
+
+if(!validatePhone(num.value))
+{
+console.log("call number");
+num.style.border='1px solid red';
+return false;
+}
+else{
+num.style.border='1px solid gray';
+}
+
+}
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+function validatePhone(phone_no){
+var phoneno = /^\d{10}$/;
+return phoneno.test(phone_no)
+}
+</script>
+
+
+
+
+
+<form onsubmit="return validate()">
+
+<input type="text" id="email" onkeyup="validate()"><br>
+<input type="text" id="num" onkeyup="validate()"><br>
+<input type="submit" value="SAVE">
+</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.block{width:15px;height:500px;background-color:white;border:1px solid gray;border-radius:10px;
+position:relative;
+left:600px;
+}
+
+#inblock{
+width:15px;background-color:green;
+/*height:300px;*/
+border-radius:10px;
+position:absolute;
+bottom:0;
+
+}
+
+.kk{transition:height 2s;}
+.data{
+text-align:center;
+}
+</style>
+<script>
+
+/*function sagar(x){
+
+document.getElementById('a2').innerHTML=x;
+}
+
+function sum(){
+var all=document.getElementsByClassName('a3');
+var s=0;
+for(let i=0;i<all.length-1;i++){
+s+=eval(all[i].innerHTML);
+
+}
+
+var asd=document.getElementsByClassName('a3');
+asd[asd.length-1].innerHTML=s;
+}
+
+function sagar(x){
+  var inr = (x/72);
+  document.getElementById('a2').value=inr;
+if(inr>100){
+document.getElementById('a2').style.backgroundColor="green";
+}else{
+document.getElementById('a2').style.backgroundColor="#fff";
+}
+
+}
+function sagar1(x){
+
+var dol =(x*72);
+  document.getElementById('a1').value=dol;
+
+}*/
+
+
+function sum(){
+
+var s = document.getElementsByClassName('a1');
+
+var total= (s[0].value)*(s[1].value)/100; 
+//console.log(s[0].value);
+ 
+  var d= document.getElementsByClassName('data');
+ //console.log(d[0].innerHTML=s[0].value);
+ d[0].innerHTML=s[0].value;
+ document.getElementById('inblock').style.height= s[1].value+"%";
+ document.getElementById('inblock').classList.add("kk");
+ 
+
+
+}
+
+
+
+</script>
+</head>
+<body>
+
+<!--
+<input type="text" id="a1"  onkeyup="sagar(this.value)">
+
+<p id="a2"></p>
+
+
+
+<button onclick="sum()">get SUM</button>
+
+<p class="a3">20</p>
+<p class="a3">20</p>
+<p class="a3">20</p>
+<p class="a3">30</p>
+<p class="a3">20</p>
+<p class="a3">340</p>
+<p class="a3">20</p>
+<p class="a3">10</p>
+<p class="a3">20</p>
+
+<h1 class="a3"></h1>
+
+-->
+
+<input type="text" value="0" class="a1"  onkeyup="sum()">
+<input type="text" value="0" class="a1" onkeyup="sum()">
+
+<button onclick="sum()"> calculate</button>
+
+<p class="data"></p>
+<div class="block">
+
+<div id="inblock">  </div>
+
+   </div>
+<p class="data">1</p>
+</body>
+</html>

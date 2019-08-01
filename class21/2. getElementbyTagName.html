@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+<script>
+
+
+
+</script>
+</head>
+<body>
+
+
+<div id="s1">
+<input type="text" class="a"></br>
+<input type="text" class="a"></br>
+<input type="text" class="a">
+</div>
+
+</br></br>
+<input type="checkbox" id='nn' onclick="chk()">
+</br></br>
+
+<div id="s2">
+<input type="text" class="a"></br>
+<input type="text" class="a"></br>
+<input type="text" class="a"></br>
+<input type="text" class="a"></br>
+<input type="text" class="a">
+</div>
+
+<script>
+
+function chk(){
+var checkclick=document.getElementById('nn');
+var s1=document.getElementById('s1');
+var s2=document.getElementById('s2');
+var addo = s1.getElementsByClassName('a');
+var addp = s2.getElementsByClassName('a');
+if(checkclick.checked)
+{
+for(var i=0;i<addo.length;i++){
+addp[i+1].value=addo[i].value;
+}
+}
+else{
+for(var i=0;i<addo.length;i++){
+addp[i].value="";
+}
+
+}
+}
+
+</script>
+
+
+
+
+</body>
+
+
+
+</body>
+</html>

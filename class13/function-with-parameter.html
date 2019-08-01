@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+/*  FUNCTION WITH PARAMETER */
+function display(x,y)
+{
+var z=x+y;
+
+console.log(z);
+
+}
+display(10,20);
+
+
+
+
+/*  FUNCTION WITH DEFAULT PARAMETER */
+
+function disp(x=5,y=2)
+{
+var z=x+y;
+
+console.log(z);
+}
+
+
+function mm(eve)
+{
+z=eve.keyCode;
+console.log(z);
+
+
+var x=eve.clientX;
+var y=eve.clientY;
+console.log("x-axis="+x+"---"+"y axis="+y);
+
+
+var x=eve.screenX;
+var y=eve.screenY;
+
+console.log(x,y);
+
+
+}
+
+
+var abc=function(){
+
+console.log("hello");
+}
+
+abc();
+
+</script>
+</head>
+<body onmousemove="mm(event)" style="height:500px;">
+
+
+
+<!--
+onclick
+ondbclick
+onkeyup
+onkeydown
+onkeypress
+onabort
+onblur
+onchange
+onmousemove
+onmouseover
+onmouseout
+onload  --  BODY
+onselect  --FORM ELEMENT
+onscroll
+-->
+<button onclick="disp(10,20)">Click Karo Na bhai</button>
+
+<label onclick="disp(10,20)">LAVEL</label>
+
+<p >gkjghj</p>
+
+<input type="text" onkeyup="mm(event)">
+
+<!--<input onselect="disp(10,20)" type="text" onclick="disp(10,20)" onkeyup="disp(10,20)">
+-->
+</body>
+</html>

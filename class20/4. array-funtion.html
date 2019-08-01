@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script>
+
+function pricipl_amnt(){
+var pricl = document.getElementById('pricl').value;
+var intst = document.getElementById('intst').value;
+var reslt = document.getElementById('reslt');
+
+var amount=pricl*(intst/100);
+
+reslt.value=amount;
+
+}
+
+</script>
+</head>
+<body>
+
+<input type="number" id="pricl">
+<input type="number" id="intst" onkeyup="pricipl_amnt()" >
+<input type="number" id="reslt">
+
+
+
+</body>
+</html>
+
+
+

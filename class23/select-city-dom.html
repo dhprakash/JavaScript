@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+function city(){
+var city = document.getElementById('city');
+var city_add = document.getElementById('city_add');
+var sub = document.getElementById('sub');
+
+city_add.style.display="none";
+var city_name = document.getElementById('city_name');
+city_name.value=city.value;
+if(city_name.value == "MUMBAI"){
+city_add.style.display="block";
+}
+if(city_name.value!==""){
+//alert('hi');
+//sub.removeAttribute("disabled");
+sub.disabled = false;
+}
+}
+
+</script>
+</head>
+<body>
+<form>
+<p><input id="city_name" type="text" readonly></p>
+<p id="city_add" style="display:none;"><input  type="text" ></p>
+<input type="submit" id="sub" value="Send" disabled>
+</form>
+
+<select id="city" onchange="city()">
+<option value="">--select--</option>
+<option>DELHI</option>
+<option>MUMBAI</option>
+<option>KOLKATTA</option>
+<option>CHENNAI</option>
+<option>JAIPUR</option>
+</select>
+
+
+
+</body>
+</html>

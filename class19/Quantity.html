@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.qu{color:#fff;padding:10px;background-color:red;width:20%;text-align:center;margin:10px;}
+</style>
+</head>
+
+<body>
+
+
+
+<div class="m">
+<p class="qu">1</p>
+<p class="qu">2</p>
+<p class="qu">3</p>
+<p class="qu">4</p>
+<p class="qu">5</p>
+<p class="qu">89</p>
+<p class="qu">7</p>
+<p class="qu">8</p>
+<p class="qu">9</p>
+<p class="qu">10</p>
+</div>
+<h1 id="w"></h1>
+<button onclick="check()">calculate</button>
+
+
+
+
+
+<script>
+function check(){
+var counter=document.getElementById('w');
+var mm=document.getElementsByClassName('m')[0];
+var arr=mm.getElementsByClassName('qu');
+var count=0;
+for(let i=0;i<arr.length;i++){
+count+=eval(arr[i].innerHTML);
+}
+counter.innerHTML="Quantity: "+count;
+}
+</script>
+
+</body>
+</html>

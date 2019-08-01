@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<script>
+//  VAR-ARGS  variable length arguments
+
+
+/*  TIMINGS OF JAVASCRIPT  */ 
+
+
+var req=function(order,time){
+	console.log("request"+order);
+	
+	res(function(){
+		console.log("deliver "+order);
+	},time);
+	
+}
+var res=function(call,time){
+	setTimeout(call,time);
+}
+req(1,4000);
+req(2,20000);
+req(3,5000);
+req(4,6000);
+req(5,4000);
+
+</script>
+</head>
+<body> 
+
+
+</body>
+</html>

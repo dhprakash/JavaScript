@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.lgaona{position:absolute;width:150px;height:150px;background:linear-gradient(270deg,green,blue,pink);border-radius:50%;}
+</style>
+<script>
+
+var cl=setInterval(animate,10);
+var left=0;
+var t=0;
+
+function animate()
+{
+var ele=document.getElementsByClassName('lgaona'); 
+console.log("hello");
+if(left<=600){
+ console.log(left);
+//clearInterval(cl);
+ left=left+2;
+  ele[0].style.left=left+"px";
+ }
+else if(t <= 600)
+ {
+ t=t+2;
+ console.log(t);
+ 
+  ele[0].style.top=t+"px";
+ }
+ 
+
+}
+
+</script>
+</head>
+<body>
+
+
+
+<div class="lgaona">
+
+</div>
+
+</body>
+
+</html>

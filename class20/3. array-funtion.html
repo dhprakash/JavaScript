@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var arr=["Mukesh","Suresh","Mahesh","Amit","Dharam","Jagat","OM","Nishant","Sagar"];
+
+function hi(x)
+{
+var d=arr.filter((value)=>
+{
+return value.toLowerCase().includes(x);
+});
+
+if(x==''){
+d=[];
+}
+var list="";
+for(var i=0;i<d.length;i++)
+{
+list+="<li>"+d[i]+"</li>";
+}
+
+document.getElementById('list').innerHTML=list;
+list="";
+
+}
+
+</script>
+</head>
+<body>
+<h1>Search</h1>
+
+<input type="text" placeholder="Serach Name" onkeyup="hi(this.value)">
+
+<ul id='list'></ul>
+
+</body>
+</html>
+
+
+

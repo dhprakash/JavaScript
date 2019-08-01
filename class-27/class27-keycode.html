@@ -1,0 +1,56 @@
+<!doctype>
+<html>
+
+<head>
+
+</head>
+<body>
+<p id="demo"></p>
+<input type="text" onkeyup="code(event)">
+<script>
+function code(x)
+{
+x.keyCode;
+console.log(x.keyCode);
+//console.log(x.altKey);
+if (x.altKey && x.keyCode==82) {
+console.log("hello");
+}
+}
+
+setInterval(status,1000);
+function status()
+    {
+	console.log(navigator.platform);
+        if(navigator.onLine)
+        {
+            
+        }
+        else
+        {
+            window.location.assign('internet.html');
+        }
+    }
+
+	
+
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+
+getLocation();
+</script>
+
+</body>
+
+</html>
