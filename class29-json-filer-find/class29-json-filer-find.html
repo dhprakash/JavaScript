@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+var kk;
+var showdata = function(){
+	var amit =new XMLHttpRequest();
+	console.log("first");
+	document.getElementById('m').style.display="block";
+		amit.onreadystatechange=function(){
+			if(this.readyState==4 && this.status==200)
+				{
+					var data = this.responseText;
+					 kk = JSON.parse(data);
+					console.log(data);
+					console.log("third");
+					document.getElementById('m').style.display="none";
+				readapi();
+					//empflt();				
+				}
+		}
+		
+		console.log("second");
+amit.open("GET","http://dummy.restapiexample.com/api/v1/employees",true);
+		amit.send();
+		}
+	
+
+
+
+
+	
+		function readapi(){
+		tableId="<tr><th>ID</th><th>Employee Name</th><th>Employee Salary</th><th>Age</th></tr>";			
+	      for(let i=0;i<kk.length;i++){
+		tableId+="<tr>";
+		tableId+="<td>"+kk[i].id+"</td>";
+		tableId+="<td>"+kk[i].employee_name+"</td>";
+			tableId+="<td>"+kk[i].employee_salary+"</td>";
+				tableId+="<td>"+kk[i].employee_age+"</td>";
+		tableId+="</tr>";
+		
+	}
+	
+			document.getElementById("test").innerHTML =tableId;
+		}
+		
+
+function search(val)
+{
+var arr=kk.filter((v)=>{
+
+return v.employee_name.toLowerCase().includes(val.toLowerCase());
+});
+tableId="<tr><th>ID</th><th>Employee Name</th><th>Employee Salary</th><th>Age</th></tr>";			
+	for(let i=0;i<arr.length;i++){
+		tableId+="<tr>";
+		tableId+="<td>"+arr[i].id+"</td>";
+		tableId+="<td>"+arr[i].employee_name+"</td>";
+		tableId+="<td>"+arr[i].employee_salary+"</td>";
+		tableId+="<td>"+arr[i].employee_age+"</td>";
+		tableId+="</tr>";
+		}
+document.getElementById("test").innerHTML =tableId;
+
+
+}		
+	
+
+
+function age(val)
+{
+var arr=kk.filter((v)=>{
+
+return v.employee_age>=eval(val);
+});
+
+
+
+tableId="<tr><th>ID</th><th>Employee Name</th><th>Employee Salary</th><th>Age</th></tr>";			
+	for(let i=0;i<arr.length;i++){
+		tableId+="<tr>";
+		tableId+="<td>"+arr[i].id+"</td>";
+		tableId+="<td>"+arr[i].employee_name+"</td>";
+		tableId+="<td>"+arr[i].employee_salary+"</td>";
+		tableId+="<td>"+arr[i].employee_age+"</td>";
+		tableId+="</tr>";
+		}
+document.getElementById("test").innerHTML =tableId;
+
+
+}		
+		
+</script>
+</head>
+
+<body>
+
+<div id="demo">
+<img src='loader.gif' style='display:none;' id='m'>
+
+</div>
+
+<input placeholder="Search" type="text" onkeyup="search(this.value)">
+<input placeholder="Enter Age" type="number" onkeyup="age(this.value)">
+
+<table border='1' id="test">
+
+</table>
+	<button type="button" onclick="showdata()">ShowAPI</button>
+</body>
+</html>
